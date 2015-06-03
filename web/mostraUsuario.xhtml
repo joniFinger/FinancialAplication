@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Usuário Cadastrado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Usuário Cadastrado</h1>
+        <hr/>
+        <h:outputLabel value="Nome:" for="nome"/>
+        <h:outputText id="saidaTexto" value="#{usuarioBean.nome}"/><br/>
+        <h:outputLabel value="E-Mail" for="linkemail" />
+        <h:outputLink id="linkemail" value="mailto:#{usuarioBean.email}">
+        <h:outputText value="#{usuarioBean.email}"/>
+        </h:outputLink><br/>
+        <h:outputLabel value="Senha:" for="senha"/>
+        <h:outputText value="#{usuarioBean.senha}"/><br/>
+        <hr/>
+        <h:form>
+            <h:commandLink action="inicio" value="Início"/>
+        </h:form>
+c    </body>
+</html>

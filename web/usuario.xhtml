@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <head>
+        <title>Cadastro de usuários</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Cadastro de usuários</h1>
+        <hr/>
+        <h:form id="formCadastroUsuario">
+            <h:messages/>
+            <h:panelGrid id="panelGridUsuario" columns="2">
+                <h:outputLabel value="Nome:" for="nome"/>
+                <h:inputText id="nome" label="Nome" value="#{usuarioBean.nome}" required="true"/>
+                
+                <h:outputLabel value="e-mail:" for="email"/>
+                <h:inputText id="email" label="e-mail" value="#{usuarioBean.email}"/>
+                
+                <h:outputLabel value="Senha:" for="senha"/>
+                <h:inputSecret id="senha" label="Senha" value="#{usuarioBean.senha}" required="true"/>
+                
+                <h:outputLabel value="Confirmar Senha:" for="confirmarsenha"/>
+                <h:inputSecret id="confirmarsenha" label="Confirmar Senha" value="#{usuarioBean.confirmaSenha}" required="true"/>
+                <h:outputText/>
+                <h:commandButton action="#{usuarioBean.salvar()}" value="Salvar"/>
+            </h:panelGrid>
+        </h:form>
+        <hr/>
+        <div></div>
+    </body>
+</html>

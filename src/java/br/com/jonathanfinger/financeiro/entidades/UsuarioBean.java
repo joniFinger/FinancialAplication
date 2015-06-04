@@ -35,7 +35,7 @@ public class UsuarioBean {
         FacesContext context = FacesContext.getCurrentInstance();
         if (!getSenha().equalsIgnoreCase(getConfirmaSenha())) {
             context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Senha confirmada incorretamente!", ""));
-            return "usuario";
+            return "usuario?faces-redirect=true";
         }
         //salva o usuario
         return "sucesso";

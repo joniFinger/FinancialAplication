@@ -7,7 +7,7 @@ package br.com.jonathanfinger.financeiro.entidades;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
 /**
@@ -15,7 +15,7 @@ import javax.faces.context.FacesContext;
  * @author Finger
  */
 @ManagedBean(name = "usuarioBean")
-@SessionScoped
+@RequestScoped
 public class UsuarioBean {
 
     /**
@@ -38,7 +38,7 @@ public class UsuarioBean {
             return "usuario";
         }
         //salva o usuario
-        return "mostraUsuario";
+        return "sucesso";
     }
     /**
      * Creates a new instance of UsuarioBean
